@@ -21,6 +21,7 @@ public class Main extends Script implements LoopTask, Paintable {
 	
 	@Override
 	public int loop() {
+		System.out.println("RUNNING");
 		return 100;
 	}
 
@@ -28,14 +29,15 @@ public class Main extends Script implements LoopTask, Paintable {
 	public void paint(Graphics g) {
 		g.setColor(Color.GREEN);
 		
-		addDebugLine(g, "Mouse - " + Mouse.getInstance().getPoint());
-		addDebugLine(g, "isRunEnabled() - " + ExtraMethods.isRunEnabled());
-		addDebugLine(g, "isAutoRetaliateEnabled() - " + ExtraMethods.isAutoRetaliateEnabled());
-		addDebugLine(g, "getAttackStyle() - " + ExtraMethods.getAttackStyle());
-		addDebugLine(g, "0 CurrentLevel -  " + Skills.getCurrentLevel(0));
-		addDebugLine(g, "1 CurrentLevel - " + Skills.getCurrentLevel(1));
-		addDebugLine(g, "2 CurrentLevel - " + Skills.getCurrentLevel(2));
-		addDebugLine(g, "3 CurrentLevel - " + Skills.getCurrentLevel(3));
+		addDebugLine(g, "Mouse: " + Mouse.getInstance().getPoint());
+		addDebugLine(g, "isRunEnabled(): " + ExtraMethods.isRunEnabled());
+		addDebugLine(g, "isAutoRetaliateEnabled(): " + ExtraMethods.isAutoRetaliateEnabled());
+		addDebugLine(g, "getAttackStyle(): " + ExtraMethods.getAttackStyle());
+		addDebugLine(g, "0 CurrentLevel:  " + Skills.getCurrentLevel(0));
+		addDebugLine(g, "1 CurrentLevel: " + Skills.getCurrentLevel(1));
+		addDebugLine(g, "2 CurrentLevel: " + Skills.getCurrentLevel(2));
+		addDebugLine(g, "3 CurrentLevel: " + Skills.getCurrentLevel(3));
+		addDebugLine(g, "isMoving(): " + ExtraMethods.isMoving());
 		
 		moveDebugLine();
 	}

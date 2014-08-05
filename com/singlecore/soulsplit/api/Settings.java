@@ -15,7 +15,7 @@ public class Settings {
 	}
 
 	public static final int[] getSettings() {
-		return (int[]) Reflection.getFieldValue(SETTINGS_HOOK, "[I");
+		return (int[]) Reflection.getFieldValue(SETTINGS_HOOK, "class [I");
 	}
 
 }
